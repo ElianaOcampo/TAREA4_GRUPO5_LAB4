@@ -2,6 +2,7 @@ package Paneles;
 
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -78,6 +79,9 @@ public class IngresarPeliculas extends JPanel {
 					textFNombre.setText("");
 					cbGenero.setSelectedIndex(0);
 					TextLabelID.setText(Integer.toString(Peliculas.devuelveProximoID()));
+				}
+				else { 
+					JOptionPane.showMessageDialog(null, "Debes completar todos los datos");
 				}
 			}
 		});
